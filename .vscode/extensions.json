@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "vscode.python",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance"
+  ]
+}

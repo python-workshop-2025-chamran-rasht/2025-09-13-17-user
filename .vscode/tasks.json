@@ -1,0 +1,36 @@
+{
+  // From https://stackoverflow.com/a/75201789
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set up Python Env",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "/bin/sh",
+          "args": [
+            "-c"
+          ]
+        }
+      },
+      "command": "python3 -m venv .venv && . .venv/bin/activate && python3 -m pip install --upgrade pip && python3 -m pip install -r requirements.txt",
+      "windows": {
+        "options": {
+          "shell": {
+            "executable": "C:\\Windows\\system32\\cmd.exe",
+            "args": [
+              "/d",
+              "/c"
+            ]
+          },
+        },
+        "command": "(if not exist .venv py -m venv .venv) && .\\.venv\\Scripts\\activate.bat && py -m pip install --upgrade pip && py -m pip install -r requirements.txt"
+      }
+    }
+  ]
+}
