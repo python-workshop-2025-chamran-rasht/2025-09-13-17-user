@@ -1,4 +1,4 @@
-# تمرین فلاسک
+# 2025-09-13 17 User session
 
 برای clone کردن داخل VS Code:
 
@@ -46,5 +46,5 @@
 3. فلاسک را اجرا کنید
 
    ```sh
-   flask --app exercise run
+   flask run
    ```
