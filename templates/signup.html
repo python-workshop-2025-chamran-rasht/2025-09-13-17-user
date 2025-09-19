@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.full_name.label }}
+        {{ form.full_name(size=32) }}
+        {% for i in form.full_name.errors %}
+        <span style="color: red">[ {{i}} ]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }}
+        {{ form.email(size=32) }}
+        {% for i in form.email.errors %}
+        <span style="color: red">[ {{i}} ]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.phone.label }}
+        {{ form.phone(size=32) }}
+        {% for i in form.phone.errors %}
+        <span style="color: red">[ {{i}} ]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password(size=32) }}
+        {% for i in form.password.errors %}
+        <span style="color: red">[ {{i}} ]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.repeat_password.label }}
+        {{ form.repeat_password(size=32) }}
+        {% for i in form.repeat_password.errors %}
+        <span style="color: red">[ {{i}} ]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{% endblock %}
